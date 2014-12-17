@@ -1,0 +1,25 @@
+{
+  "name": "circles",
+  "version": "0.0.1",
+  "description": "A game with circles",
+  "dependencies": {
+    "pixi.js": ""
+  },
+  "devDependencies": {
+    "beefy": "",
+    "browserify": "",
+    "uglify-js": "",
+    "trash": "konsumer/trash"
+  },
+  "scripts": {
+    "start": "beefy src/game.js:app.js --open",
+    "dev": "npm run clean && browserify src/game.js -o app.js",
+    "prod": "npm run clean && browserify src/game.js -o app.js && uglifyjs app.js -o app.min.js",
+    "clean": "trash --force app.js app.min.js"
+  },
+  "contributors": [
+    "David Konsumer <konsumer@jetboystudio.com> (http://jetboystudio.com)",
+    "Gabriel Schroder <gabe.schroder@gmail.com> ()"
+  ],
+  "license": "MIT"
+}
