@@ -24,8 +24,8 @@ ajax.get('assets/levels/level1.svg')
 function animate() {
   requestAnimationFrame( animate ); 
   renderer.render(stage);
-  if (layers && layers.goal){
-    layers.goal.children.forEach(function(enemy){
+  if (layers && layers.enemies){
+    layers.enemies.children.forEach(function(enemy){
       enemy.x -= 1;
       enemy.y += 1;
     })

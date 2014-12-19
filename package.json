@@ -4,6 +4,7 @@
   "description": "A game with circles",
   "dependencies": {
     "pixi.js": "",
+    "sizzle": "^2.1.1",
     "superagent": "^0.21.0"
   },
   "devDependencies": {
