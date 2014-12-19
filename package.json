@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "description": "A game with circles",
   "dependencies": {
-    "pixi.js": ""
+    "pixi.js": "",
+    "superagent": "^0.21.0"
   },
   "devDependencies": {
     "beefy": "",
@@ -21,5 +22,6 @@
     "David Konsumer <konsumer@jetboystudio.com> (http://jetboystudio.com)",
     "Gabriel Schroder <gabe.schroder@gmail.com> ()"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "browserify": {}
 }
