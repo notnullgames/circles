@@ -15,8 +15,7 @@
   },
   "scripts": {
     "start": "beefy src/index.js:app.min.js --open --cwd pub",
-    "dev": "npm run clean && browserify src/index.js -o pub/app.js",
-    "prod": "npm run clean && browserify src/index.js -o pub/app.js && uglifyjs pub/app.js -o pub/app.min.js",
+    "build": "npm run clean && browserify src/index.js -o pub/app.js && uglifyjs pub/app.js -o pub/app.min.js",
     "clean": "trash --force app.js pub/app.min.js"
   },
   "contributors": [
