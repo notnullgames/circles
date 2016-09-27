@@ -10,18 +10,30 @@
   "devDependencies": {
     "beefy": "",
     "browserify": "",
-    "uglify-js": "",
-    "trash": "konsumer/trash"
+    "gh-pages-deploy": "^0.4.2",
+    "trash": "konsumer/trash",
+    "uglify-js": ""
   },
   "scripts": {
     "start": "beefy src/index.js:app.min.js --open --cwd pub",
     "build": "npm run clean && browserify src/index.js -o pub/app.js && uglifyjs pub/app.js -o pub/app.min.js",
-    "clean": "trash --force app.js pub/app.min.js"
+    "clean": "trash --force app.js pub/app.min.js",
+    "deploy": "gh-pages-deploy"
   },
   "contributors": [
     "David Konsumer <konsumer@jetboystudio.com> (http://jetboystudio.com)",
     "Gabriel Schroder <gabe.schroder@gmail.com> ()"
   ],
   "license": "MIT",
-  "browserify": {}
+  "browserify": {},
+  "gh-pages-deploy": {
+    "staticpath": "pub",
+    "prep": [
+      "build"
+    ],
+    "post": [
+      "clean"
+    ],
+    "noprompt": false
+  }
 }
